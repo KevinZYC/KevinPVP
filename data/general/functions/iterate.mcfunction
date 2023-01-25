@@ -8,8 +8,10 @@ scoreboard players remove @a[scores={ult=1..}] ult 1
 clear @a crossbow{Charged:0b}
 clear @a glass_bottle
 kill @e[type=arrow,nbt={life:10s}]
+kill @e[type=item]
 execute as @e[type=arrow] run data merge entity @s {pickup:0b}
 execute as @e[type=spectral_arrow] run data merge entity @s {pickup:0b}
+
 #general saturation
 effect give @a saturation 1 1 true
 effect give @a[nbt=!{ActiveEffects:[{Id:21}]}] health_boost 999999 4 true
@@ -22,6 +24,7 @@ scoreboard players remove @a[scores={heal_timer=1..}] heal_timer 1
 effect give @a[scores={heal_timer=..0},nbt=!{ActiveEffects:[{Id:10}]}] regeneration 2 1 true
 #call abilities
 function assassin:abilities
+function large:abilities
 
 #post abilities
 scoreboard players remove @a[scores={kill_trigger=1..}] kill_trigger 1
