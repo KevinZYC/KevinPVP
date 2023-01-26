@@ -27,6 +27,7 @@ effect give @a[scores={heal_timer=..0},nbt=!{ActiveEffects:[{Id:10}]}] regenerat
 #call abilities
 function assassin:abilities
 function large:abilities
+function awesome:abilities
 
 #post abilities
 scoreboard players remove @a[scores={kill_trigger=1..}] kill_trigger 1
