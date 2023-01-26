@@ -3,7 +3,9 @@
 item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]},nbt=!{ActiveEffects:[{Id:11,Amplifier:28b}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:3},{id:fire_aspect,lvl:1}]}
 
 #ability 1: passive
-execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{ActiveEffects:[{Id:10,Amplifier:2b}]}] if entity @e[nbt=!{Fire:-20s},distance=..8] run effect give @s regeneration 1 2
+execute as @e store result score @s fire run data get entity @s Fire
+execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{ActiveEffects:[{Id:10,Amplifier:2b}]}] at @s if entity @e[scores={fire=1..},distance=..8] run effect give @s regeneration 2 2
+
 
 #ability 2: 
 

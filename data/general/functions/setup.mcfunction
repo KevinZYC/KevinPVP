@@ -3,6 +3,7 @@ scoreboard objectives add ability2 dummy
 scoreboard objectives add ult dummy
 scoreboard objectives add kill_trigger totalKillCount
 scoreboard objectives add damage_taken minecraft.custom:minecraft.damage_taken
+scoreboard objectives add fire dummy
 scoreboard objectives add heal_timer dummy
 scoreboard players set @a ability1 50
 scoreboard players set @a ability2 50
