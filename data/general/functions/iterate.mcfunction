@@ -12,6 +12,7 @@ kill @e[type=item]
 execute as @e[type=arrow] run data merge entity @s {pickup:0b}
 execute as @e[type=spectral_arrow] run data merge entity @s {pickup:0b}
 execute as @e[nbt={ShotFromCrossbow:1b}] run data merge entity @s {PierceLevel:10}
+kill @e[type=zoglin]
 
 #general saturation
 effect give @a saturation 1 1 true
@@ -31,3 +32,6 @@ function awesome:abilities
 
 #post abilities
 scoreboard players remove @a[scores={kill_trigger=1..}] kill_trigger 1
+
+#awesome abilities
+execute at @e[nbt={ActiveEffects:[{Id:18}]}] at @s setblock ~ ~ ~ fire
