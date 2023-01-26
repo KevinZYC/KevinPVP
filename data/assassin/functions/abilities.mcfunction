@@ -6,7 +6,7 @@ item replace entity @a[nbt={Inventory:[{id:"minecraft:feather"}]},nbt=!{Inventor
 effect give @a[nbt={Inventory:[{id:"minecraft:feather"}]}] strength 1 0 true
 
 #ability 1: dash
-scoreboard players set @a[scores={kill_trigger=1..}] ability1 0
+scoreboard players set @a[nbt={Inventory:[{id:"minecraft:feather"}]},scores={kill_trigger=1..}] ability1 0
 execute as @e[type=arrow,nbt={Potion:"minecraft:slowness"},nbt={inGround:0b}] at @s run tp @p[nbt={Inventory:[{id:"minecraft:feather"}]},scores={ability1=90..100},distance=..4] ^ ^0.5 ^-0.5
 execute as @e[type=arrow,nbt={Potion:"minecraft:slowness"}] at @s run effect give @p[nbt={Inventory:[{id:"minecraft:feather"}]},scores={ability1=90..100},distance=..4] slow_falling 4
 execute as @e[type=arrow,nbt={Potion:"minecraft:slowness"}] at @s unless entity @a[nbt={Inventory:[{id:"minecraft:feather"}]},scores={ability1=90..100},distance=..4] run kill @s
