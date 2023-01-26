@@ -11,6 +11,7 @@ kill @e[type=arrow,nbt={life:10s}]
 kill @e[type=item]
 execute as @e[type=arrow] run data merge entity @s {pickup:0b}
 execute as @e[type=spectral_arrow] run data merge entity @s {pickup:0b}
+execute as @e[nbt={ShotFromCrossbow:1b}] run data merge entity @s {PierceLevel:10}
 
 #general saturation
 effect give @a saturation 1 1 true
