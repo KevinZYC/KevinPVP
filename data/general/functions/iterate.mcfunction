@@ -29,9 +29,10 @@ effect give @a[scores={heal_timer=..0},nbt=!{ActiveEffects:[{Id:10}]}] regenerat
 function assassin:abilities
 function large:abilities
 function awesome:abilities
+function tank:abilities
 
 #post abilities
 scoreboard players remove @a[scores={kill_trigger=1..}] kill_trigger 1
 
 #awesome abilities
-execute at @e[nbt={ActiveEffects:[{Id:18}]}] at @s setblock ~ ~ ~ fire
+execute as @e[nbt={ActiveEffects:[{Id:18}]}] at @s run fill ~ ~ ~ ~ ~ ~ fire replace air
