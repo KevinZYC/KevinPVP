@@ -34,4 +34,3 @@ function awesome:abilities
 scoreboard players remove @a[scores={kill_trigger=1..}] kill_trigger 1
 
 #awesome abilities
-execute at @e[nbt={ActiveEffects:[{Id:18}]}] at @s setblock ~ ~ ~ fire
