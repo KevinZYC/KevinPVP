@@ -15,7 +15,8 @@ execute as @e[nbt={ShotFromCrossbow:1b}] run data merge entity @s {PierceLevel:1
 
 #general saturation
 effect give @a saturation 1 1 true
-effect give @a[nbt=!{ActiveEffects:[{Id:21}]}] health_boost 999999 4 true
+execute as @a run attribute @s minecraft:generic.max_health base set 40
+#effect give @a[nbt=!{ActiveEffects:[{Id:21}]}] health_boost 999999 4 true
 
 #passive healing
 scoreboard players set @a[scores={damage_taken=1..}] heal_timer 60
