@@ -15,3 +15,14 @@ item replace entity @a[nbt={Inventory:[{id:"minecraft:bread"}]},scores={ability2
 scoreboard players set @a[nbt={Inventory:[{id:"minecraft:bread"}]},nbt={Inventory:[{id:"minecraft:leather_helmet"}]},nbt=!{Inventory:[{Slot:103b,Count:1b,id:"minecraft:leather_helmet"}]}] ability2 150
 effect give @a[nbt={Inventory:[{Slot:103b,Count:1b,id:"minecraft:leather_helmet"}]}] regeneration 3 4
 clear @a[nbt={Inventory:[{Slot:103b,Count:1b,id:"minecraft:leather_helmet"}]},scores={ability2=147..149}] leather_helmet
+
+#ability 3: grav kill
+item replace entity @a[nbt={Inventory:[{id:"minecraft:bread"}]},scores={ult=..0},nbt=!{Inventory:[{id:"minecraft:leather_chestplate"}]}] hotbar.2 with leather_chestplate{Enchantments:[{id:binding_curse,lvl:1}]}
+scoreboard players set @a[nbt={Inventory:[{id:"minecraft:bread"}]},nbt={Inventory:[{id:"minecraft:leather_chestplate"}]},nbt=!{Inventory:[{Slot:102b,Count:1b,id:"minecraft:leather_chestplate"}]}] ult 800
+effect give @a[nbt={Inventory:[{Slot:102b,Count:1b,id:"minecraft:leather_chestplate"}]}] slowness 4 42
+effect give @a[nbt={Inventory:[{Slot:102b,Count:1b,id:"minecraft:leather_chestplate"}]}] jump_boost 4 128
+effect give @a[nbt={Inventory:[{Slot:102b,Count:1b,id:"minecraft:leather_chestplate"}]}] resistance 4 1
+clear @a[nbt={Inventory:[{Slot:102b,Count:1b,id:"minecraft:leather_chestplate"}]},nbt={ActiveEffects:[{Id:2,Amplifier:42b}]}] leather_chestplate
+execute as @e[type=!arrow,type=!spectral_arrow,type=!trident,type=!allay] at @s if entity @a[distance=2..8,nbt={ActiveEffects:[{Id:2,Amplifier:42b}]}] facing entity @p[distance=2..8,nbt={ActiveEffects:[{Id:2,Amplifier:42b}]}] feet run tp @s ^ ^ ^0.3
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b,Duration:1}]}] at @s run effect give @e[distance=..5,nbt=!{ActiveEffects:[{Id:2,Amplifier:42b,Duration:1}]}] instant_damage 1 2
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b,Duration:1}]}] at @s run particle explosion_emitter
