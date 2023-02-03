@@ -11,10 +11,10 @@ execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{ActiveEffects
 #ability 2: 
 scoreboard players set @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{id:"minecraft:diamond_helmet"}]}] ability2 200
 item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:diamond_helmet"}]},scores={ability2=..0}] hotbar.1 with minecraft:diamond_helmet
+item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:diamond_helmet"}]},nbt=!{Inventory:[{Slot:103b,Count:1b,id:"minecraft:diamond_helmet"}]},nbt={ActiveEffects:[{Id:12,Amplifier:28b}]}] hotbar.1 with minecraft:diamond_helmet
 effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{Slot:103b,Count:1b,id:"minecraft:diamond_helmet"}]},nbt=!{ActiveEffects:[{Id:12,Amplifier:28b}]},nbt=!{ActiveEffects:[{Id:13,Amplifier:28b}]}] resistance 1 30
 effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{Slot:103b,Count:1b,id:"minecraft:diamond_helmet"}]},nbt={ActiveEffects:[{Id:12,Amplifier:28b}]},nbt=!{ActiveEffects:[{Id:13,Amplifier:28b}]}] resistance 3 30
 execute as @e[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{Slot:103b,Count:1b,id:"minecraft:diamond_helmet"}]},nbt=!{ActiveEffects:[{Id:13,Amplifier:28b}]}] at @e[sort=nearest,limit=1,nbt=!{Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{Slot:103b,Count:1b,id:"minecraft:diamond_helmet"}]}] run fill ~ ~ ~ ~ ~ ~ fire replace air
-
 
 
 #ult: muck
