@@ -37,3 +37,4 @@ scoreboard players remove @a[scores={kill_trigger=1..}] kill_trigger 1
 
 #awesome abilities
 execute as @e[nbt={ActiveEffects:[{Id:18}]}] at @s run fill ~ ~ ~ ~ ~ ~ fire replace air
+
