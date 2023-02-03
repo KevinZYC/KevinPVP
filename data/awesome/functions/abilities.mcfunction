@@ -1,10 +1,11 @@
 #character token: bread
 #weapon: netherite sword, sharpness 3
-item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]},nbt=!{ActiveEffects:[{Id:11,Amplifier:28b}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:3},{id:fire_aspect,lvl:1}]}
+item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]},nbt=!{ActiveEffects:[{Id:11,Amplifier:28b}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:1},{id:fire_aspect,lvl:1}]}
 
 #ability 1: passive
 execute as @e store result score @s fire run data get entity @s Fire
-execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{ActiveEffects:[{Id:10,Amplifier:2b}]}] at @s if entity @e[scores={fire=1..},distance=..8] run effect give @s regeneration 2 2
+execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{ActiveEffects:[{Id:10,Amplifier:2b}]},nbt=!{ActiveEffects:[{Id:12,Amplifier:28b}]}] at @s if entity @e[scores={fire=1..},distance=..8] run effect give @s regeneration 2 2
+execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{ActiveEffects:[{Id:10,Amplifier:2b}]},nbt={ActiveEffects:[{Id:12,Amplifier:28b}]}] at @s if entity @e[scores={fire=1..},distance=..8] run effect give @s regeneration 2 4
 
 
 #ability 2: 
@@ -13,6 +14,7 @@ execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{ActiveEffects
 effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={ActiveEffects:[{Id:13,Amplifier:28b}]}] resistance 12 28
 effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={ActiveEffects:[{Id:13,Amplifier:28b}]}] fire_resistance 17 28
 effect clear @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={ActiveEffects:[{Id:11,Amplifier:28b}]}] regeneration
+effect clear @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={ActiveEffects:[{Id:11,Amplifier:28b}]}] weakness
 item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={ActiveEffects:[{Id:11,Amplifier:28b}]}] hotbar.0 with minecraft:crossbow{Enchantments:[{id:"minecraft:quick_charge",lvl:1}],Charged:1b,ChargedProjectiles:[{id:"minecraft:tipped_arrow",Count:1,tag:{Potion:"minecraft:weakness"}}]} 1
 execute as @e[type=arrow,nbt={Potion:"minecraft:weakness"}] run data merge entity @s {damage:5.0d}
 execute as @e[type=arrow, nbt={Potion:"minecraft:weakness"}] at @s unless entity @a[nbt={ActiveEffects:[{Id:11,Amplifier:28b}]},distance=..8] run kill @s
