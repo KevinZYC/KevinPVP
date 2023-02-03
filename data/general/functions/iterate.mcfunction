@@ -30,6 +30,7 @@ function assassin:abilities
 function large:abilities
 function awesome:abilities
 function tank:abilities
+function sniper:abilities
 
 #post abilities
 scoreboard players remove @a[scores={kill_trigger=1..}] kill_trigger 1
