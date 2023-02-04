@@ -1,6 +1,6 @@
 #character token: magma_block
 #weapon: netherite sword, sharpness 3
-item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]},nbt=!{ActiveEffects:[{Id:11,Amplifier:28b}]},nbt=!{ActiveEffects:[{Id:11,Amplifier:30b}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:1},{id:fire_aspect,lvl:1}]}
+item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]},nbt=!{ActiveEffects:[{Id:11,Amplifier:28b}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:1},{id:fire_aspect,lvl:1}]}
 
 #passive
 execute as @e store result score @s fire run data get entity @s Fire
@@ -14,12 +14,12 @@ scoreboard players set @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={In
 scoreboard players set @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{id:"minecraft:diamond_helmet"}]}] ability2 160
 item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:diamond_helmet"}]},scores={ability2=..0}] weapon.offhand with minecraft:diamond_helmet
 item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:diamond_helmet"}]},nbt=!{Inventory:[{Slot:103b,Count:1b,id:"minecraft:diamond_helmet"}]},nbt={ActiveEffects:[{Id:12,Amplifier:28b}]}] weapon.offhand with minecraft:diamond_helmet
-effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{Slot:103b,Count:1b,id:"minecraft:diamond_helmet"}]},nbt=!{ActiveEffects:[{Id:12,Amplifier:28b}]},nbt=!{ActiveEffects:[{Id:13,Amplifier:28b}]}] resistance 1 30
-effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{Slot:103b,Count:1b,id:"minecraft:diamond_helmet"}]},nbt={ActiveEffects:[{Id:12,Amplifier:28b}]},nbt=!{ActiveEffects:[{Id:13,Amplifier:28b}]}] resistance 3 30
+effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{Slot:103b,Count:1b,id:"minecraft:diamond_helmet"}]},nbt=!{ActiveEffects:[{Id:12,Amplifier:28b}]},nbt=!{ActiveEffects:[{Id:11,Amplifier:28b}]}] resistance 1 30
+effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{Slot:103b,Count:1b,id:"minecraft:diamond_helmet"}]},nbt={ActiveEffects:[{Id:12,Amplifier:28b}]},nbt=!{ActiveEffects:[{Id:11,Amplifier:28b}]}] resistance 3 30
 execute as @e[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{ActiveEffects:[{Id:13,Amplifier:28b}]},nbt={ActiveEffects:[{Id:11,Amplifier:30b}]}] at @e[sort=nearest,limit=1,nbt=!{Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{Slot:103b,Count:1b,id:"minecraft:diamond_helmet"}]}] run fill ~ ~ ~ ~ ~ ~ fire replace air
 effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{Slot:103b,Count:1b,id:"minecraft:diamond_helmet"}]}] water_breathing 1 26
 effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{Slot:-106b,Count:1b,id:"minecraft:crossbow"}]}] speed 1 2
-item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={ActiveEffects:[{Id:13,Amplifier:26b,Duration:10}]}] weapon.offhand with minecraft:crossbow{Enchantments:[{id:"minecraft:quick_charge",lvl:1}],Charged:1b,ChargedProjectiles:[{id:"minecraft:tipped_arrow",Count:1,tag:{Potion:"minecraft:water_breathing"}}]} 1
+item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={ActiveEffects:[{Id:13,Amplifier:26b,Duration:10}]},nbt=!{ActiveEffects:[{Id:13,Amplifier:28b}]}] weapon.offhand with minecraft:crossbow{Enchantments:[{id:"minecraft:quick_charge",lvl:1}],Charged:1b,ChargedProjectiles:[{id:"minecraft:tipped_arrow",Count:1,tag:{Potion:"minecraft:water_breathing"}}]} 1
 execute as @e[type=arrow,nbt={Potion:"minecraft:water_breathing"},nbt={inGround:1b}] at @s run effect give @e[distance=..3] slowness 2 28
 
 #ult: muck
