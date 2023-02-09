@@ -31,9 +31,16 @@ function large:abilities
 function awesome:abilities
 function tank:abilities
 function sniper:abilities
+function bruiser:abilities
+function reaper:abilities
 
 #post abilities
 scoreboard players remove @a[scores={kill_trigger=1..}] kill_trigger 1
+
+#crouch mechanics
+scoreboard players set @a[scores={crouch=1}] crouch 5
+scoreboard players remove @a[scores={crouch=1..}] crouch 1
+scoreboard players set @a[scores={crouch=3}] crouch 0
 
 #awesome abilities
 execute as @e[nbt={ActiveEffects:[{Id:18}]}] at @s run fill ~ ~ ~ ~ ~ ~ fire replace air
