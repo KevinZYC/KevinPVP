@@ -46,3 +46,5 @@ scoreboard players set @a[scores={crouch=3}] crouch 0
 execute as @e[nbt={ActiveEffects:[{Id:18}]}] at @s run fill ~ ~ ~ ~ ~ ~ fire replace air
 scoreboard players set @a[scores={totem=1}] totem 1600
 
+#spawning
+execute as @e[type=armor_stand] run data merge entity @s {Marker:1b,Invulnerable:1b,Invisible:1b}
