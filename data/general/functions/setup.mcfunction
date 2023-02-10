@@ -13,3 +13,7 @@ scoreboard players set @a damage_taken 0
 scoreboard players set @a heal_timer 0
 scoreboard players set @a kill_trigger 0
 scoreboard players set @a crouch 0
+
+#awesome
+scoreboard objectives add totem minecraft.used:minecraft.totem_of_undying 
+scoreboard players set @a totem 0

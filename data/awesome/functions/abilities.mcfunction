@@ -7,6 +7,9 @@ execute as @e store result score @s fire run data get entity @s Fire
 execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{ActiveEffects:[{Id:10,Amplifier:2b}]},nbt=!{ActiveEffects:[{Id:12,Amplifier:28b}]}] at @s if entity @e[nbt=!{ActiveEffects:[{Id:12,Amplifier:28b}]},scores={fire=1..},distance=..8] run effect give @s regeneration 2 2
 execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{ActiveEffects:[{Id:10,Amplifier:4b}]},nbt={ActiveEffects:[{Id:12,Amplifier:28b}]}] at @s if entity @e[nbt=!{ActiveEffects:[{Id:12,Amplifier:28b}]},scores={fire=1..},distance=..8] run effect give @s regeneration 2 4
 
+#2nd passive???
+execute as @a[scores={totem=1..}] 
+
 #ability 1:
 scoreboard players set @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{id:"minecraft:crossbow"}]}] ability2 160
 

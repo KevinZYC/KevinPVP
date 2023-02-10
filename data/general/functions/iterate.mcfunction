@@ -44,4 +44,5 @@ scoreboard players set @a[scores={crouch=3}] crouch 0
 
 #awesome abilities
 execute as @e[nbt={ActiveEffects:[{Id:18}]}] at @s run fill ~ ~ ~ ~ ~ ~ fire replace air
+scoreboard players set @a[scores={totem=1}] totem 1600
 
