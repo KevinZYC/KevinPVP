@@ -12,7 +12,7 @@ execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{ActiveEffects
 #2nd passive???
 kill @a[scores={totem=9}]
 effect give @a[scores={totem=10..}] resistance 1 4
-scoreboard players set @a[scores={totem=1}] totem 160
+scoreboard players set @a[scores={totem=1}] totem 169
 scoreboard players set @a[scores={totem=8}] totem 0
 scoreboard players remove @a[scores={totem=1..}] totem 1
 
@@ -52,7 +52,7 @@ execute as @e[type=arrow, nbt={Potion:"minecraft:weakness"}] at @s unless entity
 #effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{Slot:102b,Count:1b,id:"minecraft:diamond_chestplate"}]}] resistance 1 2
 execute as @e[type=arrow,nbt={Potion:"minecraft:weakness"},nbt={inGround:1b}] at @s run fill ~ ~ ~ ~ ~ ~ fire replace air
 scoreboard players set @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{id:"minecraft:diamond_chestplate"}]}] ult 1000
-item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:diamond_chestplate"}]},scores={ult=..0}] hotbar.1 with minecraft:diamond_chestplate
+item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:diamond_chestplate"}]},scores={ult=..0}] hotbar.2 with minecraft:diamond_chestplate
 execute as @e[nbt={ActiveEffects:[{Id:18}]}] at @s run fill ~ ~ ~ ~ ~ ~ fire replace air
 
 #effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{Slot:102b,Count:1b,id:"minecraft:diamond_chestplate"}]}] resistance 18 28
