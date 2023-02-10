@@ -1,6 +1,7 @@
 #character token: bread
 #weapon: bow, power 4
 item replace entity @a[nbt={Inventory:[{id:"minecraft:gold_ingot"}]},nbt=!{Inventory:[{id:"minecraft:bow"}]}] weapon.offhand with bow{Enchantments:[{id:power,lvl:4}]}
+execute as @a[nbt={Inventory:[{id:"minecraft:gold_ingot"}]}] run attribute @s minecraft:generic.max_health base set 32
 
 #ability 1: supercharged shot
 item replace entity @a[nbt={Inventory:[{id:"minecraft:gold_ingot"}]},scores={ability1=..0},nbt=!{Inventory:[{id:"minecraft:tipped_arrow",tag:{Potion:"minecraft:harming"}}]}] hotbar.0 with minecraft:tipped_arrow{Potion:"minecraft:harming"} 1

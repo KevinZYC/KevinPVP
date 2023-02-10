@@ -1,6 +1,7 @@
 #character token: feather
-#weapon: netherite sword, sharpness 6
-item replace entity @a[nbt={Inventory:[{id:"minecraft:feather"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:7}]}
+#normal attack, high damage, normal health
+item replace entity @a[nbt={Inventory:[{id:"minecraft:feather"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:8}]}
+execute as @a[nbt={Inventory:[{id:"minecraft:bread"}]}] run attribute @s minecraft:generic.max_health base set 40
 
 #effects: strength 1
 effect give @a[nbt={Inventory:[{id:"minecraft:feather"}]}] strength 1 0 true

@@ -1,7 +1,8 @@
 #character token: stone
-#weapon: netherite sword, sharpness 3
-item replace entity @a[nbt={Inventory:[{id:"minecraft:stone"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:3}]}
-#execute as @a[nbt={Inventory:[{id:"minecraft:stone"}]}] run attribute @s minecraft:generic.max_health base set 2
+#fast attack, low damage, normal health
+item replace entity @a[nbt={Inventory:[{id:"minecraft:stone"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:2}]}
+execute as @a[nbt={Inventory:[{id:"minecraft:stone"}]}] run attribute @s minecraft:generic.max_health base set 40
+effect give @a[nbt={Inventory:[{id:"minecraft:stone"}]}] haste 1
 
 #ability 1: poison bomb
 #execute as @e[type=arrow,nbt={Potion:"minecraft:luck"},nbt={inGround:1b}] at @s run summon creeper ~ ~ ~ {ExplosionRadius:1,Fuse:0,ActiveEffects:[{Id:7,Amplifier:1b}]}

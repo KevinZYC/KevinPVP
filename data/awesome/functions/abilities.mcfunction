@@ -1,10 +1,12 @@
 #character token: magma_block
-#weapon: netherite sword, sharpness 3
+#fast attack, low damage, low health
 item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]},nbt=!{ActiveEffects:[{Id:11,Amplifier:28b}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:1},{id:fire_aspect,lvl:1}]}
+execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]}] run attribute @s minecraft:generic.max_health base set 32
+effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]}] haste 1 1
 
 #passive
 execute as @e store result score @s fire run data get entity @s Fire
-execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{ActiveEffects:[{Id:10,Amplifier:2b}]},nbt=!{ActiveEffects:[{Id:12,Amplifier:28b}]}] at @s if entity @e[nbt=!{ActiveEffects:[{Id:12,Amplifier:28b}]},scores={fire=1..},distance=..8] run effect give @s regeneration 2 2
+execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{ActiveEffects:[{Id:10,Amplifier:3b}]},nbt=!{ActiveEffects:[{Id:12,Amplifier:28b}]}] at @s if entity @e[nbt=!{ActiveEffects:[{Id:12,Amplifier:28b}]},scores={fire=1..},distance=..8] run effect give @s regeneration 2 3
 execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{ActiveEffects:[{Id:10,Amplifier:4b}]},nbt={ActiveEffects:[{Id:12,Amplifier:28b}]}] at @s if entity @e[nbt=!{ActiveEffects:[{Id:12,Amplifier:28b}]},scores={fire=1..},distance=..8] run effect give @s regeneration 2 4
 
 #2nd passive???
@@ -32,10 +34,10 @@ execute as @e[type=arrow,nbt={Potion:"minecraft:water_breathing"},nbt={inGround:
 
 #ult: muck
 effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{Slot:102b,Count:1b,id:"minecraft:diamond_chestplate"}]}] water_breathing 2 28
-effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{Slot:102b,Count:1b,id:"minecraft:diamond_chestplate"}]}] resistance 1 2 true
+effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{Slot:102b,Count:1b,id:"minecraft:diamond_chestplate"}]}] resistance 1 1 true
 
 effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={ActiveEffects:[{Id:13,Amplifier:28b,Duration:39}]}] instant_health 1 100
-effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={ActiveEffects:[{Id:13,Amplifier:28b,Duration:38}]}] instant_damage 1 4
+effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={ActiveEffects:[{Id:13,Amplifier:28b,Duration:38}]}] instant_damage 1 3
 effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={ActiveEffects:[{Id:13,Amplifier:28b,Duration:37}]}] resistance 12 28
 effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={ActiveEffects:[{Id:13,Amplifier:28b,Duration:37}]}] fire_resistance 17 28
 
