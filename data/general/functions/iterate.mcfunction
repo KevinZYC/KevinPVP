@@ -1,5 +1,5 @@
 #basic game mechanics
-execute as @a run spawnpoint @s 0 -10 0
+execute as @a run spawnpoint @s 0 -60 0
 scoreboard players remove @a[scores={ability1=1..}] ability1 1
 scoreboard players remove @a[scores={ability2=1..}] ability2 1
 scoreboard players remove @a[scores={ult=1..}] ult 1
@@ -44,10 +44,10 @@ scoreboard players set @a[scores={crouch=3}] crouch 0
 #spawning
 execute as @e[type=armor_stand] run data merge entity @s {Marker:1b,Invulnerable:1b,Invisible:1b}
 
-execute positioned 0 -10 0 run effect give @a[distance=..12] resistance 1 4 true
-execute positioned 0 -10 0 run effect give @a[distance=..12] regeneration 2 50 true
-execute positioned 0 -10 0 run clear @a[distance=..3]
-execute positioned 0 -10 0 run execute as @a[distance=..3] run attribute @s minecraft:generic.max_health base set 20
+execute positioned 0 -60 0 run effect give @a[distance=..12] resistance 1 4 true
+execute positioned 0 -60 0 run effect give @a[distance=..12] regeneration 2 50 true
+execute positioned 0 -60 0 run clear @a[distance=..3]
+execute positioned 0 -60 0 run execute as @a[distance=..3] run attribute @s minecraft:generic.max_health base set 20
 
 #targets
 effect give @e[type=vindicator] resistance 1 1
