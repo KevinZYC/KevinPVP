@@ -2,7 +2,7 @@
 #high damage, low attack speed, high health
 item replace entity @a[nbt={Inventory:[{id:"minecraft:bread"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:8}]}
 execute as @a[nbt={Inventory:[{id:"minecraft:bread"}]}] run attribute @s minecraft:generic.max_health base set 48
-effect give @a[nbt={Inventory:[{id:"minecraft:bread"}]}] mining_fatigue 1 1
+effect give @a[nbt={Inventory:[{id:"minecraft:bread"}]}] mining_fatigue 1 1 true
 
 
 #ability 1: chain hook

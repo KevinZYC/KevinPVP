@@ -3,7 +3,7 @@
 item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]},nbt=!{ActiveEffects:[{Id:11,Amplifier:28b}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:1},{id:fire_aspect,lvl:1}]}
 item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:totem_of_undying"}]},scores={totem=0}] weapon.offhand with minecraft:totem_of_undying
 execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]}] run attribute @s minecraft:generic.max_health base set 32
-effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]}] haste 1 1
+effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]}] haste 1 1 true
 
 #passive
 execute as @e store result score @s fire run data get entity @s Fire
