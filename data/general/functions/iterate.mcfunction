@@ -42,10 +42,5 @@ scoreboard players set @a[scores={crouch=1}] crouch 5
 scoreboard players remove @a[scores={crouch=1..}] crouch 1
 scoreboard players set @a[scores={crouch=3}] crouch 0
 
-#awesome abilities
-scoreboard players remove @a[scores={totem=1..}] totem 1
-execute as @e[nbt={ActiveEffects:[{Id:18}]}] at @s run fill ~ ~ ~ ~ ~ ~ fire replace air
-scoreboard players set @a[scores={totem=1}] totem 1600
-
 #spawning
 execute as @e[type=armor_stand] run data merge entity @s {Marker:1b,Invulnerable:1b,Invisible:1b}
