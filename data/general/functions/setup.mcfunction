@@ -17,3 +17,6 @@ scoreboard players set @a crouch 0
 #awesome
 scoreboard objectives add totem minecraft.used:minecraft.totem_of_undying 
 scoreboard players set @a totem 0
+
+#goober
+scoreboard objectives add goo minecraft.used:minecraft.carrot_on_a_stick
