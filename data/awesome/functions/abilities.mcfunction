@@ -1,7 +1,7 @@
-#character token: magma_blockross
+#character token: magma_block
 #weapon: netherite sword, sharpness 3
 item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]},nbt=!{ActiveEffects:[{Id:11,Amplifier:28b}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:1},{id:fire_aspect,lvl:1}]}
-item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:totem_of_undying"}]},scores={totem=0}] weapon.offhand with minecraft:totem_of_undying
+item replace entity @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt=!{Inventory:[{id:"minecraft:totem_of_undying"}]},scores={totem=0a}] weapon.offhand with minecraft:totem_of_undying
 execute as @a[nbt={Inventory:[{id:"minecraft:magma_block"}]}] run attribute @s minecraft:generic.max_health base set 32
 effect give @a[nbt={Inventory:[{id:"minecraft:magma_block"}]}] haste 1 1
 
@@ -17,9 +17,7 @@ scoreboard players set @a[scores={totem=1}] totem 169
 scoreboard players set @a[scores={totem=8}] totem 0
 scoreboard players remove @a[scores={totem=1..}] totem 1
 
-
 #ability 1:
-
 
 #ability 2: 
 scoreboard players set @a[nbt={Inventory:[{id:"minecraft:magma_block"}]},nbt={Inventory:[{id:"minecraft:blaze_powder"}]}] ability2 160
