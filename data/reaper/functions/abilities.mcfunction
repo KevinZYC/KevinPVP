@@ -2,7 +2,7 @@
 #fast attack, normal damage, normal health
 item replace entity @a[nbt={Inventory:[{id:"minecraft:blackstone"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:5}]}
 execute as @a[nbt={Inventory:[{id:"minecraft:blackstone"}]}] run attribute @s minecraft:generic.max_health base set 40
-effect give @a[nbt={Inventory:[{id:"minecraft:blackstone"}]}] haste 1 1
+effect give @a[nbt={Inventory:[{id:"minecraft:blackstone"}]}] haste 1 1 true
 
 #ability 2: Shadow step
 item replace entity @a[nbt={Inventory:[{id:"minecraft:blackstone"}]},scores={ability2=..0},nbt=!{Inventory:[{id:"minecraft:netherite_helmet"}]}] weapon.offhand with netherite_helmet{Enchantments:[{id:binding_curse,lvl:1}]}
