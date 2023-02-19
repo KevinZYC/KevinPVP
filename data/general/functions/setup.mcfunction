@@ -20,5 +20,6 @@ scoreboard players set @a totem 0
 
 #goober
 scoreboard objectives add goo minecraft.used:minecraft.carrot_on_a_stick
+scoreboard objectives add hammer minecraft.used:minecraft.golden_sword
 scoreboard objectives add reload dummy
-scoreboard players set @a[nbt={Inventory:[{id:"minecraft:glow_ink_sac"}]}] reload 10
+scoreboard objectives add charges dummy
