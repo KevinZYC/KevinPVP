@@ -13,5 +13,7 @@ effect give @a[nbt={Inventory:[{id:"minecraft:glow_ink_sac"}]},scores={goo=1},nb
 execute at @e[type=area_effect_cloud,nbt={Potion:"minecraft:water_breathing"}] run effect give @e[distance=..4,nbt=!{ActiveEffects:[{Id:19}]},nbt=!{Inventory:[{id:"minecraft:glow_ink_sac"}]}] poison 1 1
 execute at @e[type=area_effect_cloud,nbt={Potion:"minecraft:water_breathing"}] run effect give @e[distance=..4,nbt=!{ActiveEffects:[{Id:19}]},nbt=!{Inventory:[{id:"minecraft:glow_ink_sac"}]}] slowness 1 0
 execute at @e[type=area_effect_cloud,nbt={Potion:"minecraft:water_breathing"}] run effect give @e[distance=..4,nbt=!{ActiveEffects:[{Id:19}]},nbt={Inventory:[{id:"minecraft:glow_ink_sac"}]}] speed 1 0
+    #reload
+    execute as @a[nbt={Inventory:[{id:"minecraft:glow_ink_sac"}]},nbt=!{ActiveEffects:[{Id:13,Amplifier:38b}]},nbt={SelectedItem:{id:"minecraft:netherite_sword"}}]
 
 scoreboard players reset @a goo

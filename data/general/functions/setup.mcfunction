@@ -20,4 +20,5 @@ scoreboard players set @a totem 0
 
 #goober
 scoreboard objectives add goo minecraft.used:minecraft.carrot_on_a_stick
-scoreboard objectives add 
+scoreboard objectives add reload dummy
+scoreboard players set @a[nbt={Inventory:[{id:"minecraft:glow_ink_sac"}]}] crouch 10
