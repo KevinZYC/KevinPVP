@@ -1,0 +1,1 @@
+effect give @e[nbt={ActiveEffects:[{Id:22,Amplifier:7b,Duration:20}]}] instant_damage 1 3

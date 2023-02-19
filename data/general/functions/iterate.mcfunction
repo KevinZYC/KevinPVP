@@ -23,7 +23,7 @@ scoreboard players set @a[scores={damage_taken=1..}] heal_timer 60
 scoreboard players set @a[scores={damage_taken=1..}] damage_taken 0
 scoreboard players remove @a[scores={heal_timer=1..}] heal_timer 1
 
-effect give @a[scores={heal_timer=..0},nbt=!{ActiveEffects:[{Id:10}]}] regeneration 2 1 true
+effect give @a[scores={heal_timer=..0},nbt=!{ActiveEffects:[{Id:10}]}] regeneration 1 2 true
 #call abilities
 function assassin:abilities
 function large:abilities
@@ -52,3 +52,6 @@ execute positioned 0 -60 0 run execute as @a[distance=..3] run attribute @s mine
 #targets
 effect give @e[type=vindicator] resistance 1 1
 effect give @e[type=vindicator] slowness 1 3
+
+#damaging
+function general:damage

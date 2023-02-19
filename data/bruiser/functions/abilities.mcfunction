@@ -1,6 +1,6 @@
 #character token: iron ingot
 #slow attack, high damage, average health
-item replace entity @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},nbt=!{Inventory:[{id:"minecraft:netherite_axe"}]}] hotbar.0 with netherite_axe{Enchantments:[{id:sharpness,lvl:8}]}
+item replace entity @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:8}]}
 item replace entity @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},nbt=!{Inventory:[{id:"minecraft:bow"}]}] weapon.offhand with bow{Enchantments:[{id:power,lvl:4},{id:punch,lvl:2}]}
 execute as @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]}] run attribute @s minecraft:generic.max_health base set 40
 effect give @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]}] mining_fatigue 1 1 true
@@ -17,7 +17,7 @@ execute as @e[type=arrow,nbt={Potion:"minecraft:strong_harming"},nbt={HasBeenSho
 #ability 2: seismic slam
 item replace entity @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},scores={ability2=..0},nbt=!{Inventory:[{id:"minecraft:splash_potion"}]}] hotbar.2 with splash_potion{Potion:"minecraft:awkward"}
 scoreboard players set @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},nbt={Inventory:[{id:"minecraft:splash_potion"}]}] ability2 125
-execute as @e[type=potion,nbt={Item:{tag:{Potion:"minecraft:awkward"}}}] at @s run tp @p[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},distance=..4] ^ ^0.5 ^-0.5
+execute as @e[type=potion,nbt={Item:{tag:{Potion:"minecraft:awkward"}}}] at @s run tp @p[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},distance=..4] ^ ^1 ^-0.5
 execute as @e[type=potion,nbt={Item:{tag:{Potion:"minecraft:awkward"}}}] at @s run effect give @p[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},distance=..4] slow_falling 1
 execute as @e[type=potion,nbt={Item:{tag:{Potion:"minecraft:awkward"}}}] at @s run effect give @e[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},nbt=!{ActiveEffects:[{Id:28}]},distance=..3] levitation 1 18
 execute as @e[type=potion,nbt={Item:{tag:{Potion:"minecraft:awkward"}}}] at @s run effect give @e[nbt=!{Inventory:[{id:"minecraft:iron_ingot"}]},distance=..3] levitation 1 18
@@ -29,7 +29,7 @@ execute as @e[type=potion,nbt={Item:{tag:{Potion:"minecraft:awkward"}}}] at @s r
 
 #ult: meteor strike
 item replace entity @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},scores={ult=..0},nbt=!{Inventory:[{id:"minecraft:iron_boots"}]}] hotbar.3 with iron_boots{Enchantments:[{id:binding_curse,lvl:1}]}
-scoreboard players set @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},nbt={Inventory:[{id:"minecraft:iron_boots"}]},nbt=!{Inventory:[{Slot:100b,Count:1b,id:"minecraft:iron_boots"}]}] ult 150
+scoreboard players set @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},nbt={Inventory:[{id:"minecraft:iron_boots"}]},nbt=!{Inventory:[{Slot:100b,Count:1b,id:"minecraft:iron_boots"}]}] ult 500
 effect give @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},nbt={Inventory:[{Slot:100b,Count:1b,id:"minecraft:iron_boots"}]}] resistance 5 69
 effect give @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},nbt={Inventory:[{Slot:100b,Count:1b,id:"minecraft:iron_boots"}]}] levitation 1 15
 effect give @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},nbt={Inventory:[{Slot:100b,Count:1b,id:"minecraft:iron_boots"}]}] slow_falling 2

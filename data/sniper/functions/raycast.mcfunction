@@ -1,4 +1,5 @@
-execute run particle ash
+execute run particle electric_spark
+execute run particle firework
 execute unless block ~ ~ ~ air positioned ^ ^ ^-0.2 run particle large_smoke
 effect give @e[distance=0..0.7,type=!snowball] instant_damage 1 2
 execute positioned ~ ~-0.7 ~ run effect give @e[distance=0..0.7,type=!snowball] instant_damage 1 2
