@@ -1,7 +1,7 @@
 clear @s golden_helmet
 effect clear @s water_breathing
 playsound minecraft:entity.player.attack.sweep ambient @a ~ ~ ~
-particle sonic_boom
+particle sonic_boom ^ ^ ^
 execute if block ^ ^ ^0.5 air run tp @s ^ ^ ^0.1
 scoreboard players remove @s ability1 1
 execute unless entity @s[scores={ability1=..95}] positioned ^ ^ ^0.5 if block ~ ~ ~ air run function assassin:recursive

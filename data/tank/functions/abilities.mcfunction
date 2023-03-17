@@ -2,7 +2,7 @@
 #high damage, low attack speed, high health
 item replace entity @a[nbt={Inventory:[{id:"minecraft:bread"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:8}]}
 execute as @a[nbt={Inventory:[{id:"minecraft:bread"}]}] run attribute @s minecraft:generic.max_health base set 48
-effect give @a[nbt={Inventory:[{id:"minecraft:bread"}]}] mining_fatigue 1 1 true
+effect give @a[nbt={Inventory:[{id:"minecraft:bread"}]}] mining_fatigue 1 2 true
 
 
 #ability 1: chain hook
@@ -19,7 +19,7 @@ scoreboard players set @a[nbt={Inventory:[{id:"minecraft:bread"}]},nbt={Inventor
 effect give @a[nbt={Inventory:[{Slot:103b,Count:1b,id:"minecraft:leather_helmet"}]}] regeneration 3 4
 clear @a[nbt={Inventory:[{Slot:103b,Count:1b,id:"minecraft:leather_helmet"}]},scores={ability2=147..149}] leather_helmet
 
-#ability 3: grav kill
+#ability 3: grav surge
 item replace entity @a[nbt={Inventory:[{id:"minecraft:bread"}]},scores={ult=..0},nbt=!{Inventory:[{id:"minecraft:leather_chestplate"}]}] hotbar.2 with leather_chestplate{Enchantments:[{id:binding_curse,lvl:1}]}
 scoreboard players set @a[nbt={Inventory:[{id:"minecraft:bread"}]},nbt={Inventory:[{id:"minecraft:leather_chestplate"}]},nbt=!{Inventory:[{Slot:102b,Count:1b,id:"minecraft:leather_chestplate"}]}] ult 800
 effect give @a[nbt={Inventory:[{Slot:102b,Count:1b,id:"minecraft:leather_chestplate"}]}] slowness 4 42
@@ -28,5 +28,22 @@ effect give @a[nbt={Inventory:[{Slot:102b,Count:1b,id:"minecraft:leather_chestpl
 clear @a[nbt={Inventory:[{Slot:102b,Count:1b,id:"minecraft:leather_chestplate"}]},nbt={ActiveEffects:[{Id:2,Amplifier:42b}]}] leather_chestplate
 execute as @e[type=!arrow,type=!spectral_arrow,type=!trident,type=!allay,type=!armor_stand] at @s if entity @a[distance=2..8,nbt={ActiveEffects:[{Id:2,Amplifier:42b}]}] facing entity @p[distance=2..8,nbt={ActiveEffects:[{Id:2,Amplifier:42b}]}] feet run tp @s ^ ^ ^0.3
 execute as @e[type=!arrow,type=!spectral_arrow,type=!trident,type=!allay,type=!armor_stand] at @s if entity @a[distance=0.1..8,nbt={ActiveEffects:[{Id:2,Amplifier:42b}]}] run effect give @s wither 1 10
-execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b,Duration:1}]}] at @s run effect give @e[distance=..5,nbt=!{ActiveEffects:[{Id:2,Amplifier:42b,Duration:1}]}] instant_damage 1 2
+
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b}]},scores={crouch=5..,ult=780..}] at @s run effect give @e[distance=0.1..5] instant_damage 1 0
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b}]},scores={crouch=5..,ult=780..}] at @s run particle explosion_emitter
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b}]},scores={crouch=5..,ult=780..}] at @s run effect clear @s slowness
+
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b}]},scores={crouch=5..,ult=760..779}] at @s run effect give @e[distance=0.1..5] instant_damage 1 1
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b}]},scores={crouch=5..,ult=760..779}] at @s run particle explosion_emitter
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b}]},scores={crouch=5..,ult=760..779}] at @s run effect clear @s slowness
+
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b}]},scores={crouch=5..,ult=740..759}] at @s run effect give @e[distance=0.1..5] instant_damage 1 2
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b}]},scores={crouch=5..,ult=740..759}] at @s run particle explosion_emitter
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b}]},scores={crouch=5..,ult=740..759}] at @s run effect clear @s slowness
+
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b}]},scores={crouch=5..,ult=720..739}] at @s run effect give @e[distance=0.1..5] instant_damage 1 2
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b}]},scores={crouch=5..,ult=720..739}] at @s run particle explosion_emitter
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b}]},scores={crouch=5..,ult=720..739}] at @s run effect clear @s slowness
+
+execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b,Duration:1}]}] at @s run effect give @e[distance=0.1..5,nbt=!{ActiveEffects:[{Id:2,Amplifier:42b,Duration:1}]}] instant_damage 1 3
 execute as @a[nbt={ActiveEffects:[{Id:2,Amplifier:42b,Duration:1}]}] at @s run particle explosion_emitter

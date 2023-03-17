@@ -3,7 +3,7 @@
 item replace entity @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},nbt=!{Inventory:[{id:"minecraft:netherite_sword"}]}] hotbar.0 with netherite_sword{Enchantments:[{id:sharpness,lvl:8}]}
 item replace entity @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},nbt=!{Inventory:[{id:"minecraft:bow"}]}] weapon.offhand with bow{Enchantments:[{id:power,lvl:4},{id:punch,lvl:2}]}
 execute as @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]}] run attribute @s minecraft:generic.max_health base set 40
-effect give @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]}] mining_fatigue 1 1 true
+effect give @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]}] mining_fatigue 1 2 true
 
 #ability 1: rocket punch
 item replace entity @a[nbt={Inventory:[{id:"minecraft:iron_ingot"}]},scores={ability1=..0},nbt=!{Inventory:[{id:"minecraft:tipped_arrow",tag:{Potion:"minecraft:strong_harming"}}]}] hotbar.1 with minecraft:tipped_arrow{Potion:"minecraft:strong_harming"} 1

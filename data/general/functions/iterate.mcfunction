@@ -33,6 +33,8 @@ function sniper:abilities
 function bruiser:abilities
 function reaper:abilities
 function goober:abilities
+function spy:abilities
+function warden:abilities
 
 #post abilities
 scoreboard players remove @a[scores={kill_trigger=1..}] kill_trigger 1

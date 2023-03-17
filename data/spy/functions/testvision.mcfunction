@@ -1,0 +1,3 @@
+execute at @s anchored eyes facing entity @e[type=area_effect_cloud,nbt={Potion:"minecraft:strong_slowness"}] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..1.1] run effect give @s blindness 3
+execute at @s anchored eyes facing entity @e[type=area_effect_cloud,nbt={Potion:"minecraft:strong_slowness"}] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.8] run effect give @s blindness 4
+execute at @s anchored eyes facing entity @e[type=area_effect_cloud,nbt={Potion:"minecraft:strong_slowness"}] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..0.5] run effect give @s blindness 6

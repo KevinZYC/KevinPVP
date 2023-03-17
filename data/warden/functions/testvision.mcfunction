@@ -1,0 +1,1 @@
+execute at @s anchored eyes facing entity @a[nbt={Inventory:[{id:"minecraft:sculk"}]}] eyes anchored feet positioned ^ ^ ^1 rotated as @s positioned ^ ^ ^-1 if entity @s[distance=..1.1] run effect give @s darkness 3

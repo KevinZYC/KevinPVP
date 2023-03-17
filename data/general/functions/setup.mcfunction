@@ -20,4 +20,8 @@ scoreboard players set @a totem 0
 
 #goober
 scoreboard objectives add goo minecraft.used:minecraft.carrot_on_a_stick
-scoreboard objectives add 
+#scoreboard objectives add 
+
+#warden
+scoreboard objectives add sprint minecraft.custom:minecraft.sprint_one_cm
+scoreboard players set @a sprint 0
