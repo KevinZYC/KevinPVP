@@ -22,6 +22,8 @@ execute at @e[type=area_effect_cloud,nbt={Potion:"minecraft:water_breathing"}] r
 
 
 #ability 1: big hammer
-execute as @a[nbt={Inventory:[{id:"minecraft:glow_ink_sac"}]},scores={hammer=1}] at @s facing entity @e[sort=nearest,limit=1,distance=0.1.. ] feet run summon area_effect_cloud ^ ^ ^5 {Particle:"glow_squid_ink",Radius:4,Duration:40,RadiusPerTick:0,Potion:"minecraft:water_breathing"}
+execute as @a[nbt={Inventory:[{id:"minecraft:glow_ink_sac"}]},scores={hammer=1}] at @s facing entity @s feet run summon area_effect_cloud ^ ^ ^ {Particle:"glow_squid_ink",Radius:4,Duration:40,RadiusPerTick:0,Potion:"minecraft:water_breathing"}
+kill @e[type=experience_bottle]
+
 scoreboard players reset @a goo
 scoreboard players reset @a hammer
