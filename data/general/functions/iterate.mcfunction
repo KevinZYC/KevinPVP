@@ -3,6 +3,7 @@ execute as @a run spawnpoint @s 0 -60 0
 scoreboard players remove @a[scores={ability1=1..}] ability1 1
 scoreboard players remove @a[scores={ability2=1..}] ability2 1
 scoreboard players remove @a[scores={ult=1..}] ult 1
+scoreboard players remove @a[scores={reload=1..}] reload 1
 
 #misc cleanups
 clear @a crossbow{Charged:0b}
