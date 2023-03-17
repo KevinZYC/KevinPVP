@@ -20,7 +20,7 @@ scoreboard players set @a totem 0
 
 #goober
 scoreboard objectives add goo minecraft.used:minecraft.carrot_on_a_stick
-scoreboard objectives add hammer minecraft.used:minecraft.golden_sword
+scoreboard objectives add hammer minecraft.used:minecraft.experience_bottle
 scoreboard objectives add reload dummy
 #scoreboard objectives add 
 
