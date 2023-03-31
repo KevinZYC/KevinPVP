@@ -26,15 +26,16 @@ execute as @a[nbt={Inventory:[{id:"minecraft:sculk"}]}] at @s run effect give @e
 
 #ability 1: blind pulse
 
-execute if entity @a[nbt={Inventory:[{id:"minecraft:sculk"}]},scores={ability1=..1}] as @a[nbt=!{Inventory:[{id:"minecraft:sculk"}]}] at @s run execute at @a[nbt={Inventory:[{id:"minecraft:sculk"}]},distance=..60,scores={ability1=..1}] facing entity @s eyes run function warden:blind
-scoreboard players set @a[nbt={Inventory:[{id:"minecraft:sculk"}]},scores={ability1=..0}] ability1 40
+execute if entity @a[nbt={Inventory:[{id:"minecraft:sculk"}]},scores={ability1=..1}] as @a[nbt=!{Inventory:[{id:"minecraft:sculk"}]}] at @s run execute at @a[nbt={Inventory:[{id:"minecraft:sculk"}]},distance=..25,scores={ability1=..1}] facing entity @s eyes run function warden:blind
+scoreboard players set @a[nbt={Inventory:[{id:"minecraft:sculk"}]},scores={ability1=..0}] ability1 45
+execute as @a[nbt={Inventory:[{id:"minecraft:sculk"}]},scores={ability1=10}] at @s run particle sonic_boom ~ ~1 ~
 
 
 #ability 2: sonic boom
 execute as @a[nbt={Inventory:[{id:"minecraft:sculk"}]},nbt={Inventory:[{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:quick_charge",lvl:1}]}}]}] run scoreboard players set @s ability2 90
 item replace entity @a[nbt={Inventory:[{id:"minecraft:sculk"}]},scores={ability2=..0},nbt=!{Inventory:[{id:"minecraft:crossbow",tag:{Enchantments:[{id:"minecraft:quick_charge",lvl:1}]}}]}] hotbar.1 with minecraft:crossbow{Enchantments:[{id:"minecraft:quick_charge",lvl:1}],Charged:1b,ChargedProjectiles:[{id:"minecraft:tipped_arrow",Count:1b,tag:{Potion:"minecraft:strength"}}]} 1
 
-execute as @e[type=arrow,nbt={Potion:"minecraft:strength"}] at @s as @p[nbt={Inventory:[{id:"minecraft:sculk"}]}] at @s anchored eyes run function warden:sonic_boom
+execute as @e[type=arrow,nbt={Potion:"minecraft:strength"}] at @s as @p[nbt={Inventory:[{id:"minecraft:sculk"}]}] at @s anchored eyes positioned ^ ^ ^1.62 run function warden:sonic_boom
 
 kill @e[type=arrow,nbt={Potion:"minecraft:strength"}]
 
