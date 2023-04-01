@@ -10,3 +10,7 @@ scoreboard players set @a[nbt={Inventory:[{id:"minecraft:blackstone"}]},nbt={Inv
 execute as @a[nbt={Inventory:[{Slot:103b,Count:1b,id:"minecraft:netherite_helmet"}]}] at @s positioned ^ ^ ^4.1 run function reaper:recursive
 
 #clear @a[nbt={Inventory:[{Slot:103b,Count:1b,id:"minecraft:netherite_helmet"}]}] netherite_helmet
+
+#ability 1: bad omen tag:
+effect give @a[advancements={adventure:bad_omen=true}] minecraft:bad_omen 10 10
+advancement revoke @a[advancements={adventure:bad_omen=true}] only adventure:bad_omen
